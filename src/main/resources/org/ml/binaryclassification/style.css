@@ -1,0 +1,31 @@
+.button{
+    -fx-background-color: #d6d6d6;
+    -fx-font-weight: bold;
+    -fx-border-color:gray;
+    -fx-border-width: 1;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+}
+.button:hover{
+    -fx-background-color: #bfbfbf;
+}
+.input{
+    -fx-background-color: #f0f0f0;
+    -fx-font-weight: bold;
+    -fx-border-color:gray;
+    -fx-border-width: 1;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+}
+.lbl{
+    -fx-border-color:gray;
+    -fx-border-width: 1;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-padding: 10;
+}
+.lblNotRounded{
+    -fx-border-color:gray;
+    -fx-border-width: 1;
+    -fx-padding: 10;
+}

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.ml.binaryclassification.MainController">
+   <children>
+      <Label alignment="TOP_CENTER" layoutY="14.0" prefHeight="35.0" prefWidth="350.0" text="Training">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Line endX="44.0" endY="333.0" layoutX="306.0" layoutY="52.0" startX="44.0" startY="-38.0" />
+      <Label alignment="CENTER" layoutX="350.0" layoutY="14.0" prefHeight="35.0" prefWidth="350.0" text="Testing">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnGo" layoutX="392.0" layoutY="253.0" mnemonicParsing="false" onAction="#goBtn" prefHeight="48.0" prefWidth="267.0" stylesheets="@style.css" text="GO" />
+      <Label fx:id="lblResult" layoutX="392.0" layoutY="316.0" prefHeight="48.0" prefWidth="267.0" styleClass="lbl" stylesheets="@style.css" text="Result: ------">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtMaxEpochs" layoutX="135.0" layoutY="200.0" prefHeight="25.0" prefWidth="81.0" styleClass="input" stylesheets="@style.css" />
+      <TextField fx:id="txtLearningRate" layoutX="42.0" layoutY="200.0" prefHeight="25.0" prefWidth="81.0" styleClass="input" stylesheets="@style.css" />
+      <TextField fx:id="txtErrorGoal" layoutX="228.0" layoutY="200.0" prefHeight="25.0" prefWidth="81.0" styleClass="input" stylesheets="@style.css" />
+      <Label fx:id="lblAccuracy" layoutX="42.0" layoutY="315.0" prefHeight="52.0" prefWidth="130.0" styleClass="lbl" stylesheets="@style.css" text="Accuracy: ---">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnUpload" layoutX="42.0" layoutY="84.0" mnemonicParsing="false" onAction="#uploadFileBtn" prefHeight="75.0" prefWidth="267.0" stylesheets="@style.css" text="UPLOAD DATA" />
+      <Label layoutX="42.0" layoutY="178.0" prefHeight="17.0" prefWidth="81.0" text="Learning Rate" />
+      <Label layoutX="135.0" layoutY="178.0" prefHeight="17.0" prefWidth="81.0" text="Max Epochs" />
+      <Label layoutX="228.0" layoutY="178.0" prefHeight="17.0" prefWidth="81.0" text="Error Goal" />
+      <VBox layoutX="392.0" layoutY="69.0" prefHeight="181.0" prefWidth="267.0" spacing="5.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="206.0" text="Math" />
+            <TextField fx:id="txtScienceMark" prefHeight="28.0" prefWidth="206.0" styleClass="input" stylesheets="@style.css" />
+            <Label prefHeight="17.0" prefWidth="206.0" text="Science" />
+            <TextField fx:id="txtMathMark" prefHeight="28.0" prefWidth="206.0" styleClass="input" stylesheets="@style.css" />
+            <Label prefHeight="17.0" prefWidth="206.0" text="English" />
+            <TextField fx:id="txtEnglishMark" prefHeight="28.0" prefWidth="206.0" styleClass="input" stylesheets="@style.css" />
+         </children>
+      </VBox>
+      <Button fx:id="btnTrain" layoutX="42.0" layoutY="253.0" mnemonicParsing="false" onAction="#trainBtn" prefHeight="48.0" prefWidth="267.0" stylesheets="@style.css" text="TRAIN" />
+      <Label fx:id="lblEpochs" layoutX="179.0" layoutY="315.0" prefHeight="52.0" prefWidth="130.0" styleClass="lbl" stylesheets="@style.css" text="Epochs: ---">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

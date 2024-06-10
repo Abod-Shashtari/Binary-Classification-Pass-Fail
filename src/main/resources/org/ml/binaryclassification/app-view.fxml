@@ -30,12 +30,7 @@
       <TextField fx:id="txtMaxEpochs" layoutX="135.0" layoutY="200.0" prefHeight="25.0" prefWidth="81.0" styleClass="input" stylesheets="@style.css" />
       <TextField fx:id="txtLearningRate" layoutX="42.0" layoutY="200.0" prefHeight="25.0" prefWidth="81.0" styleClass="input" stylesheets="@style.css" />
       <TextField fx:id="txtErrorGoal" layoutX="228.0" layoutY="200.0" prefHeight="25.0" prefWidth="81.0" styleClass="input" stylesheets="@style.css" />
-      <Label fx:id="lblAccuracy" layoutX="42.0" layoutY="315.0" prefHeight="52.0" prefWidth="130.0" styleClass="lbl" stylesheets="@style.css" text="Accuracy: ---">
-         <font>
-            <Font name="System Bold" size="13.0" />
-         </font>
-      </Label>
-      <Button fx:id="btnUpload" layoutX="42.0" layoutY="84.0" mnemonicParsing="false" onAction="#uploadFileBtn" prefHeight="75.0" prefWidth="267.0" stylesheets="@style.css" text="UPLOAD DATA" />
+      <Button fx:id="btnUpload" layoutX="42.0" layoutY="84.0" mnemonicParsing="false" onAction="#uploadFileBtn" prefHeight="75.0" prefWidth="267.0" styleClass="uploadButton" stylesheets="@style.css" text="UPLOAD DATA" />
       <Label layoutX="42.0" layoutY="178.0" prefHeight="17.0" prefWidth="81.0" text="Learning Rate" />
       <Label layoutX="135.0" layoutY="178.0" prefHeight="17.0" prefWidth="81.0" text="Max Epochs" />
       <Label layoutX="228.0" layoutY="178.0" prefHeight="17.0" prefWidth="81.0" text="Error Goal" />
@@ -50,10 +45,6 @@
          </children>
       </VBox>
       <Button fx:id="btnTrain" layoutX="42.0" layoutY="253.0" mnemonicParsing="false" onAction="#trainBtn" prefHeight="48.0" prefWidth="267.0" stylesheets="@style.css" text="TRAIN" />
-      <Label fx:id="lblEpochs" layoutX="179.0" layoutY="315.0" prefHeight="52.0" prefWidth="130.0" styleClass="lbl" stylesheets="@style.css" text="Epochs: ---">
-         <font>
-            <Font name="System Bold" size="13.0" />
-         </font>
-      </Label>
+      <Button layoutX="42.0" layoutY="318.0" mnemonicParsing="false" onAction="#openEvaluationWindow" prefHeight="48.0" prefWidth="267.0" stylesheets="@style.css" text="Model Evaluation" />
    </children>
 </AnchorPane>

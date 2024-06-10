@@ -2,73 +2,90 @@
 
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="300.0" prefWidth="430.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.ml.binaryclassification.MainController">
+<AnchorPane prefHeight="375.0" prefWidth="430.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.ml.binaryclassification.ModelEvaluationController">
    <children>
-      <Label fx:id="lblTP" alignment="CENTER" layoutX="121.0" layoutY="94.0" prefHeight="56.0" prefWidth="94.0" styleClass="lblNotRounded" stylesheets="@style.css" text="TP = " textAlignment="CENTER" wrapText="true">
+      <Label fx:id="lblTP" alignment="CENTER" layoutX="121.0" layoutY="114.0" prefHeight="56.0" prefWidth="94.0" styleClass="lblNotRounded" stylesheets="@style.css" text="TP = " textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Label fx:id="lblFF" alignment="CENTER" layoutX="215.0" layoutY="94.0" prefHeight="56.0" prefWidth="94.0" styleClass="lblNotRounded" stylesheets="@style.css" text="FF = " textAlignment="CENTER" wrapText="true">
+      <Label fx:id="lblFF" alignment="CENTER" layoutX="215.0" layoutY="114.0" prefHeight="56.0" prefWidth="94.0" styleClass="lblNotRounded" stylesheets="@style.css" text="FF = " textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="215.0" layoutY="38.0" prefHeight="56.0" prefWidth="94.0" styleClass="lblNotRounded" stylesheets="@style.css" text="Predected: Fail" textAlignment="CENTER" wrapText="true">
+      <Label alignment="CENTER" layoutX="215.0" layoutY="58.0" prefHeight="56.0" prefWidth="94.0" styleClass="lblNotRounded" stylesheets="@style.css" text="Predicted: Fail" textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="121.0" layoutY="38.0" prefHeight="56.0" prefWidth="94.0" styleClass="lblNotRounded" stylesheets="@style.css" text="Predected: Pass" textAlignment="CENTER" wrapText="true">
+      <Label alignment="CENTER" layoutX="121.0" layoutY="58.0" prefHeight="56.0" prefWidth="94.0" styleClass="lblNotRounded" stylesheets="@style.css" text="Predicted: Pass" textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="29.0" layoutY="94.0" prefHeight="56.0" prefWidth="94.0" styleClass="lblNotRounded" stylesheets="@style.css" text="Desired: Pass" textAlignment="CENTER" wrapText="true">
+      <Label alignment="CENTER" layoutX="29.0" layoutY="114.0" prefHeight="56.0" prefWidth="94.0" styleClass="lblNotRounded" stylesheets="@style.css" text="Desired: Pass" textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="29.0" layoutY="150.0" prefHeight="56.0" prefWidth="94.0" styleClass="lblNotRounded" stylesheets="@style.css" text="Desired:  Fail" textAlignment="CENTER" wrapText="true">
+      <Label alignment="CENTER" layoutX="29.0" layoutY="170.0" prefHeight="56.0" prefWidth="94.0" styleClass="lblNotRounded" stylesheets="@style.css" text="Desired:  Fail" textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Label fx:id="lblFP" alignment="CENTER" layoutX="121.0" layoutY="150.0" prefHeight="56.0" prefWidth="94.0" styleClass="lblNotRounded" stylesheets="@style.css" text="FP = " textAlignment="CENTER" wrapText="true">
+      <Label fx:id="lblFP" alignment="CENTER" layoutX="121.0" layoutY="170.0" prefHeight="56.0" prefWidth="94.0" styleClass="lblNotRounded" stylesheets="@style.css" text="FP = " textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Label fx:id="lblTF" alignment="CENTER" layoutX="215.0" layoutY="150.0" prefHeight="56.0" prefWidth="94.0" styleClass="lblNotRounded" stylesheets="@style.css" text="TF = " textAlignment="CENTER" wrapText="true">
+      <Label fx:id="lblTF" alignment="CENTER" layoutX="215.0" layoutY="170.0" prefHeight="56.0" prefWidth="94.0" styleClass="lblNotRounded" stylesheets="@style.css" text="TF = " textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Label fx:id="lblNumPassSamples" alignment="CENTER" layoutX="307.0" layoutY="94.0" prefHeight="56.0" prefWidth="94.0" styleClass="lblNotRounded" stylesheets="@style.css" text="xx" textAlignment="CENTER" wrapText="true">
+      <Label fx:id="lblNumPassSamples" alignment="CENTER" layoutX="307.0" layoutY="114.0" prefHeight="56.0" prefWidth="94.0" styleClass="lblNotRounded" stylesheets="@style.css" text="xx" textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Label fx:id="lnlNumFailSamples" alignment="CENTER" layoutX="307.0" layoutY="150.0" prefHeight="56.0" prefWidth="94.0" styleClass="lblNotRounded" stylesheets="@style.css" text="xx" textAlignment="CENTER" wrapText="true">
+      <Label fx:id="lblNumFailSamples" alignment="CENTER" layoutX="307.0" layoutY="170.0" prefHeight="56.0" prefWidth="94.0" styleClass="lblNotRounded" stylesheets="@style.css" text="xx" textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="215.0" layoutY="206.0" prefHeight="56.0" prefWidth="94.0" styleClass="lblNotRounded" stylesheets="@style.css" text="xx" textAlignment="CENTER" wrapText="true">
+      <Label fx:id="lblSumPredictedFail" alignment="CENTER" layoutX="215.0" layoutY="226.0" prefHeight="56.0" prefWidth="94.0" styleClass="lblNotRounded" stylesheets="@style.css" text="xx" textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="121.0" layoutY="206.0" prefHeight="56.0" prefWidth="94.0" styleClass="lblNotRounded" stylesheets="@style.css" text="xx" textAlignment="CENTER" wrapText="true">
+      <Label fx:id="lblSumPredictedPass" alignment="CENTER" layoutX="121.0" layoutY="226.0" prefHeight="56.0" prefWidth="94.0" styleClass="lblNotRounded" stylesheets="@style.css" text="xx" textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Label fx:id="lblNumSamples" alignment="CENTER" layoutX="29.0" layoutY="38.0" prefHeight="56.0" prefWidth="94.0" styleClass="lblNotRounded" stylesheets="@style.css" text="n = x" textAlignment="CENTER" wrapText="true">
+      <Label fx:id="lblNumSamples" alignment="CENTER" layoutX="29.0" layoutY="58.0" prefHeight="56.0" prefWidth="94.0" styleClass="lblNotRounded" stylesheets="@style.css" text="n = x" textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="39.0" layoutY="14.0" prefHeight="17.0" prefWidth="356.0" text="Confusion Matrix">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Line endX="185.0" layoutX="215.0" layoutY="300.0" startX="-185.0" />
+      <Label fx:id="lblAccuracy" layoutX="31.0" layoutY="316.0" prefHeight="17.0" prefWidth="180.0" styleClass="lbl" stylesheets="@style.css" text="Accuracy: ---">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblEpochs" layoutX="221.0" layoutY="316.0" prefHeight="17.0" prefWidth="180.0" styleClass="lbl" stylesheets="@style.css" text="Epochs: ---">
+         <font>
+            <Font name="System Bold" size="14.0" />
          </font>
       </Label>
    </children>

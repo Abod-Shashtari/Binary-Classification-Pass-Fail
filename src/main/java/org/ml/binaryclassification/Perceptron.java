@@ -39,22 +39,26 @@ public class Perceptron {
                 calcNewWeights(row, error);
             }
             countEpochs++;
-            if(ssm(errors)<=errorGoal) return;
+            if(mse(errors)<=errorGoal) return;
         }
     }
-    public double testing(ArrayList<ArrayList<Integer>> testingDataSet){
+    public double[] testing(ArrayList<ArrayList<Integer>> testingDataSet){
         int countE0=0;
+        int countPass=0;
+        int countFail=0;
         ArrayList<Integer> errors=new ArrayList<>();
         for (ArrayList<Integer> row : testingDataSet) {
             int yActual = predict(row);
             int yDesired = row.getLast();
             int error = yDesired - yActual;
             if(error==0) countE0++;
+            if(yActual==yDesired && yActual==1) countPass++;
+            if(yActual==yDesired && yActual==0) countFail++;
             errors.add(error);
         }
-        return (double) countE0 /testingDataSet.size();
+        return new double[]{countPass,countFail,((double) countE0 /testingDataSet.size())};
     }
-    private double ssm(ArrayList<Integer> errors){
+    private double mse(ArrayList<Integer> errors){
         double sum=0;
         for (Integer e : errors){
             sum+=Math.pow(e,2);
